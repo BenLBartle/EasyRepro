@@ -18,7 +18,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         public void BeforeScenario()
         {
             _browser = new Api.Browser(TestSettings.Options);
-            _baseUri = new Uri(Environment.GetEnvironmentVariable("crmUrl"));
+            _baseUri = new Uri(TestContext.Parameters["crmUrl"]);
         }
 
         [AfterScenario("EasyRepro")]
@@ -30,8 +30,8 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Steps
         [Given(@"I have logged into Dynamics 365 as '(.*)'")]
         public void GivenIHaveLoggedIntoDynamicsAs(string userName)
         {
-            var loginName = Environment.GetEnvironmentVariable($"crmusername-{userName}").ToSecureString();
-            var loginPassword = Environment.GetEnvironmentVariable($"crmpassword-{userName}").ToSecureString();
+            var loginName = TestContext.Parameters[$"crmusername-{userName}"].ToSecureString();
+            var loginPassword = TestContext.Parameters[$"crmpassword-{userName}"].ToSecureString();
             
             _browser.LoginPage.Login(_baseUri, loginName, loginPassword);
             _browser.GuidedHelp.CloseGuidedHelp();
