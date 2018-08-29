@@ -1,12 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.Dynamics365.UIAutomation.Api;
-using Microsoft.Dynamics365.UIAutomation.Browser;
+﻿using Microsoft.Dynamics365.UIAutomation.Browser;
+using NUnit.Framework;
 using System;
 using System.Security;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    [TestClass]
+    [TestFixture]
     public class OpenMobile
     {
 
@@ -14,7 +13,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
         private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
 
-        [TestMethod]
+        [Test]
         public void WEBTestValidateOpenMobile()
         {
 

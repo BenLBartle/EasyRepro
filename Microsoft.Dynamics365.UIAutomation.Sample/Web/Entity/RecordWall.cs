@@ -4,10 +4,9 @@
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
     using System;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Microsoft.Dynamics365.UIAutomation.Api;
 
-    [TestClass]
+    [TestFixture]
     public class RecordWall : TestBase
     {
         [TestInitialize]
@@ -18,7 +17,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             HasData = OpenEntityGrid();
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSelectTab()
         {
             if (!HasData) return;
@@ -26,7 +25,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestAddPost()
         {
             if (!HasData) return;
@@ -35,7 +34,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestAddActivity()
         {
             if (!HasData) return;
@@ -45,7 +44,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestAddNote()
         {
             if (!HasData) return;
@@ -54,7 +53,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestAddAppointment()
         {
             if (!HasData) return;
@@ -66,7 +65,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(2000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestAddEmail()
         {
             if (!HasData) return;
@@ -78,7 +77,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
          
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestAddTask()
         {
             if (!HasData) return;
@@ -87,7 +86,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(4000); 
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestFilterActivitiesByStatus()
         {
             if (!HasData) return;

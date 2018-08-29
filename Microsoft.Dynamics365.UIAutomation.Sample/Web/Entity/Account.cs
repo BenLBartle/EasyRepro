@@ -3,12 +3,12 @@
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using NUnit.Framework;
 
-    [TestClass]
+    [TestFixture]
     public class TestAccount : TestBase
     {
-        [TestInitialize]
+        [SetUp]
         public override void TestSetup()
         {
             XrmTestBrowser.ThinkTime(500);
@@ -16,7 +16,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             HasData = OpenEntityGrid();
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestCollapseTab()
         {
             if (!HasData) return;
@@ -24,7 +24,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestPopOutForm()
         {
             if (!HasData) return;
@@ -32,7 +32,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(10000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestOpenLookup()
         {
             if (!HasData) return;
@@ -40,7 +40,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.Entity.SelectLookup(TestSettings.LookupField, 0);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSearchLookup()
         {
             if (!HasData) return;
@@ -49,7 +49,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.Entity.SelectLookup(TestSettings.LookupField, 0);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSaveEntity()
         {
             if (!HasData) return;
@@ -57,7 +57,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestCloseEntity()
         {
             if (!HasData) return;
@@ -65,7 +65,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestExpandTab()
         {
             if (!HasData) return;
@@ -73,7 +73,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.Entity.ExpandTab("Summary");
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSelectTab()
         {
             if (!HasData) return;
@@ -82,7 +82,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSelectSectionInForm()
         {
             if (!HasData) return;

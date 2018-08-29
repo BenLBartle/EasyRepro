@@ -3,10 +3,9 @@
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
 
-    [TestClass]
+    [TestFixture]
     public class InvalidOpenEntity : TestBase
     {
         [TestInitialize]
@@ -25,7 +24,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestInvalidOpenEntity()
         {
             XrmTestBrowser.ThinkTime(5000);

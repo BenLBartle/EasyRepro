@@ -3,10 +3,9 @@
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
 
-    [TestClass]
+    [TestFixture]
     public class InvalidExpandTab : TestBase
     {
         [TestInitialize]
@@ -17,7 +16,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             HasData = OpenEntityGrid();
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestInvalidExpandTab()
         {
             if (!HasData) return;

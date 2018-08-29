@@ -1,22 +1,21 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.Dynamics365.UIAutomation.Api;
 using Microsoft.Dynamics365.UIAutomation.Browser;
+using NUnit.Framework;
 using System;
 using System.Security;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    [TestClass]
+    [TestFixture]
     public class Views
     {
         private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
         private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
         private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
 
-        [TestMethod]
+        [Test]
         public void WEBTestSwitchView()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -32,7 +31,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         }
 
 
-        [TestMethod]
+        [Test]
         public void WEBTestGetGridItems()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -49,7 +48,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestOpenGridRecord()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -64,7 +63,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSortGridRow()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -81,7 +80,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSelectRecord()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -100,7 +99,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSelectAllRecords()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -118,7 +117,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestFilterGridByLetter()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -134,7 +133,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestFilterGridByAll()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -150,7 +149,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestEnableFilter()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -166,7 +165,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestGridNextPage()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -183,7 +182,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestGridPreviousPage()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -200,7 +199,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestGridFirstPage()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -217,7 +216,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestOpenChart()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -234,7 +233,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestSwitchChart()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -252,7 +251,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestRefreshGrid()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -269,7 +268,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestCloseChart()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -287,7 +286,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestQuickFindSearch()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
@@ -305,7 +304,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             }
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestPinDefaultView()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))

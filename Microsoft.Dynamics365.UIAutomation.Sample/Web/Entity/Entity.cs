@@ -3,9 +3,7 @@
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    [TestClass]
+    [TestFixture]
     public class Entity : TestBase
     {
         [TestInitialize]
@@ -15,7 +13,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             OpenEntity("Sales", "Contacts", "Active Contacts");
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestNavigateUp()
         {
             XrmTestBrowser.Grid.OpenRecord(1);
@@ -23,7 +21,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
             XrmTestBrowser.ThinkTime(5000);
         }
 
-        [TestMethod]
+        [Test]
         public void WEBTestNavigateDown()
         {
             XrmTestBrowser.Grid.OpenRecord(0);

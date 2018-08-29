@@ -1,14 +1,12 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 
-using OpenQA.Selenium.Support.Events;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
     using System;
     using System.Linq;
     using System.Security;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Microsoft.Dynamics365.UIAutomation.Api;
     using Microsoft.Dynamics365.UIAutomation.Browser;
 

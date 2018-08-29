@@ -2,7 +2,6 @@
 // Licensed under the MIT license.
 
 using Microsoft.Dynamics365.UIAutomation.Browser;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System;
 using System.IO;
@@ -10,7 +9,7 @@ using System.Security;
 
 namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
 {
-    [TestClass]
+    [TestFixture]
     public class ScreenShot
     {
 
@@ -18,7 +17,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Sample.Web
         private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
         private readonly Uri _xrmUri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
 
-        [TestMethod]
+        [Test]
         public void WEBTestTakeScreenshot()
         {
             using (var xrmBrowser = new Api.Browser(TestSettings.Options))
